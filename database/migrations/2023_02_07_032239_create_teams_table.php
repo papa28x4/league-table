@@ -19,7 +19,6 @@ class CreateTeamsTable extends Migration
             $table->string('country');
             $table->string('country_code');
             $table->timestamps();
-            //seed, country, federation_id, fifa_ranking, groups
         });
     }
 
