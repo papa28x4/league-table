@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'league-table'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9D9A37B83AD94BD0B2E564DED7FBC80D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5A8BEDF065C54A9E8CB3D80013DF7488 }}
           package: .
