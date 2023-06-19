@@ -22,7 +22,7 @@
                 <div class="col-3 mt-3"><span>{{$result->match_date}}</span></div>
                 <div class="col-3 mt-3"> 
                     <span>{{$result->team1}}</span>
-                    <span><img width="20" height="13" src="http://127.0.0.1:8000/pragmarx/countries/flag/file/{{$result->team1}}.svg" alt=""></span>
+                    <span><img width="20" height="13" src="{{URL::to('/')}}/pragmarx/countries/flag/file/{{ $result->team1 }}.svg" height="100" weight="100"></span>
                 </div>
                 <div class="col-3 mt-3">
                     <span>{{$result->team1_score}}</span>
@@ -30,7 +30,7 @@
                     <span>{{$result->team2_score}}</span>
                 </div>
                 <div class="col-3 mt-3">
-                    <span><img width="20" height="13" src="http://127.0.0.1:8000/pragmarx/countries/flag/file/{{$result->team2}}.svg" alt=""></span>
+                    <span><img width="20" height="13" src="{{URL::to('/')}}/pragmarx/countries/flag/file/{{ $result->team2 }}.svg" alt=""></span>
                     <span>{{$result->team2}}</span>
                 </div>
             </div>                
