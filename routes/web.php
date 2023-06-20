@@ -32,3 +32,5 @@ Route::get('standings/{standing}/results', 'StandingController@show')->name('sta
 Route::get('teams', 'TeamController@index')->name('teams.index');
 
 Route::get('teams/{team}', 'TeamController@show')->name('teams.show');
+
+// Route::get('test', 'ResultController@test')->name('results.test');

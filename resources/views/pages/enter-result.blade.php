@@ -33,6 +33,13 @@ span.invalid-feedback{
                         <div class="row justify-content-center">
                             <div class="col-11">
                                 <div class="row justify-content-center">
+                                    <div class="form-group col-2 pt-4">
+                                        <input class="form-check-input" type="checkbox" name="two_legs" id="two_legs" {{ old('two_legs') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label text-primary" for="two_legs">
+                                        Home&Away
+                                    </label>
+                                    </div>
                                     <div class="form-group col-2 pt-3">
                                         <input type="date" name="match_date" class="form-control" value="{{ old('match_date')  }}" >
                                         @error('match_date')
@@ -64,7 +71,7 @@ span.invalid-feedback{
                                             @enderror
                                         </div>
                                         <div class="form-group col-2 mb-4">
-                                            <input name="team1_score" type="number" min="0" class="form-control @error('team1_score') is-invalid @enderror"  value="{{ old('team1_score')  }}"  id="firstname" placeholder="  -">
+                                            <input name="team1_score" type="number" min="0" class="form-control @error('team1_score') is-invalid @enderror"  value="{{ old('team1_score') ?? 0 }}"  id="firstname" placeholder="  -">
                                             @error('team1_score')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -72,7 +79,7 @@ span.invalid-feedback{
                                             @enderror
                                         </div>
                                         <div class="form-group col-2 mb-4">
-                                            <input type="number" name="team2_score" min="0" class="form-control  @error('team2_score') is-invalid @enderror" value="{{ old('team2_score')  }}" id="lastname" placeholder="  -">
+                                            <input type="number" name="team2_score" min="0" class="form-control  @error('team2_score') is-invalid @enderror" value="{{ old('team2_score') ?? 0  }}" id="lastname" placeholder="  -">
                                             @error('team2_score')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
