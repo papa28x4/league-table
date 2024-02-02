@@ -7,44 +7,41 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About ZPortal API
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+5000 students from 37 states (including the FCT) across Nigeria apply to study one of 6 courses offered by 20 selected universities.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The goal of this application is to 1) automate the creation of the admission list for each university based on certain criteria and 2) provide some measure of data analysis.
+Requirements:
+1a) A student can only select one of the six courses.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1b) Student can pick 2 universities of choice where he hopes to study the course picked in (1a)
 
-## Learning Laravel
+2a) When a course is choosen by a student, the 4 subjects which the student would be required to write to gain admission for that course will be assigned to the student's profile
+2b) The courses offered are: Medicine, Engineering, Agriculture, Economics, Accounting and Law.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+*Subject Combinations are as follows*
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+*Medicine*: Biology, Physics & Chemistry
+*Engineering*: Mathematics, Physics & Chemistry
+*Agriculture*: Biology, Agriculture, Chemistry
+*Economics*: Economics, Government, Mathematics
+*Law*: CRK, Literature in English & Government
+*Accounting*: Accounting, Mathematics & Government 
 
-## Laravel Sponsors
+Note: English subject is compulsory for all courses.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3a) Your university list should have a mixture of Federal, State and Private universities. Also include some universities of technology in this list
 
-### Premium Partners
+3b) Universities of technology and private universities do not offer medicine yet. So if a student selects medicine, he should not be able to select a university of technology or a private university
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
+4) When the exam has been written and marked, an admin should have the ability to enter the scores for each student for the different subjects written.
+
+You should prevent accidental inputting of scores for a subject not in a student's subject combination.
+
+Note: This application will not handle the exam testing. It will be used to just record the scores.
+
+
 - **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
 
 ## Contributing
